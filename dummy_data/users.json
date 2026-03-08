@@ -5,6 +5,7 @@
     "email": "shishir@gmail.com",
     "password": "123456",
     "phone": "01725576134",
+    "otp": "0",
     "role": "admin"
   },
   {
@@ -13,6 +14,7 @@
     "email": "rahim@gmail.com",
     "password": "123456",
     "phone": "01700000002",
+    "otp": "0",
     "role": "user"
   },
   {
@@ -21,6 +23,7 @@
     "email": "karim@gmail.com",
     "password": "123456",
     "phone": "01700000003",
+    "otp": "0",
     "role": "user"
   }
 ]
