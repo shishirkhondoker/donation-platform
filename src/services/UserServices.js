@@ -58,7 +58,38 @@ const VerifyOTPService = async (req) => {
   }
 };
 
+const SaveProfileService = async (req) => {
+  try {
+    let _id = req.headers._id;
+    let reqBody = req.body;
+    reqBody._id = _id;
+
+    await UserModel.updateOne(
+      {
+        _id: _id,
+      },
+      { $set: reqBody },
+      { upsert: true },
+    );
+    return { status: "success", message: "Profile Save Success" };
+  } catch (e) {
+    return { status: "fail", message: "Profile save fail" };
+  }
+};
+
+const ReadProfileService = async (req) => {
+  try {
+    let _id = req.headers._id;
+    let result = await UserModel.find({ _id: _id });
+    return { status: "success", data: result };
+  } catch (e) {
+    return { status: "fail", data: e };
+  }
+};
+
 module.exports = {
   UserOTPServices,
   VerifyOTPService,
+  SaveProfileService,
+  ReadProfileService,
 };
