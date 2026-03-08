@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "650000000000000000000001",
+    "name": "Shishir Khondoker",
+    "email": "shishir@gmail.com",
+    "password": "123456",
+    "phone": "01725576134",
+    "role": "admin"
+  },
+  {
+    "_id": "650000000000000000000002",
+    "name": "Rahim Uddin",
+    "email": "rahim@gmail.com",
+    "password": "123456",
+    "phone": "01700000002",
+    "role": "user"
+  },
+  {
+    "_id": "650000000000000000000003",
+    "name": "Karim Ahmed",
+    "email": "karim@gmail.com",
+    "password": "123456",
+    "phone": "01700000003",
+    "role": "user"
+  }
+]
