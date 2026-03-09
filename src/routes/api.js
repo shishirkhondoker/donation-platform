@@ -9,6 +9,9 @@ const router = express.Router();
 
 router.get("/BlogList", BlogController.BlogList);
 router.get("/BlogDetails/:BlogID", BlogController.BlogDetails);
+router.post("/CreateBlog", AuthVerification, BlogController.CreateBlog);
+router.post("/UpdateBlog", AuthVerification, BlogController.UpdateBlog);
+router.get("/DeleteBlog/:BlogID", AuthVerification, BlogController.DeleteBlog);
 
 // User
 

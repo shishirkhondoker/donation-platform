@@ -1,6 +1,8 @@
 const {
   BlogListServices,
   BlogDetailsServices,
+  SaveBlogService,
+  DeleteBlogService,
 } = require("../services/BlogServices.js");
 
 exports.BlogList = async (req, res) => {
@@ -13,8 +15,17 @@ exports.BlogDetails = async (req, res) => {
   return res.status(200).json(result);
 };
 
-exports.CreateBlog = async (req, res) => {};
+exports.CreateBlog = async (req, res) => {
+  let result = await SaveBlogService(req);
+  return res.status(200).json(result);
+};
 
-exports.UpdateBlog = async (req, res) => {};
+exports.UpdateBlog = async (req, res) => {
+  let result = await SaveBlogService(req);
+  return res.status(200).json(result);
+};
 
-exports.DeleteBlog = async (req, res) => {};
+exports.DeleteBlog = async (req, res) => {
+  let result = await DeleteBlogService(req);
+  return res.status(200).json(result);
+};

@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const DataSchema = mongoose.Schema(
   {
+    userID: { type: mongoose.Types.ObjectId },
     title: { type: String, required: true },
     content: { type: String, required: true },
     author: { type: String, required: true },
