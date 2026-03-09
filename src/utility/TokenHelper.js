@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 
 exports.EncodeToken = (email, _id) => {
-  let KEY = "123-ABC-XYZ";
+  const key = process.env.KEY;
   let EXPIRE = { expiresIn: "24h" };
   let PAYLOAD = { email: email, _id: _id };
 
@@ -10,7 +10,7 @@ exports.EncodeToken = (email, _id) => {
 
 exports.DecodeToken = (token) => {
   try {
-    let KEY = "123-ABC-XYZ";
+    const key = process.env.KEY;
     return jwt.verify(token, KEY);
   } catch (e) {
     return null;

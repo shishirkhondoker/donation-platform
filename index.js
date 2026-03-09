@@ -1,5 +1,5 @@
 const app = require("./app.js");
 
-app.listen(5060, () => {
+app.listen(process.env.PORT, () => {
   console.log("Backend started port " + 5060);
 });

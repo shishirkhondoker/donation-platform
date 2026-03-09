@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const router = require("./src/routes/api.js");
 const app = new express();
@@ -10,11 +11,8 @@ const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 const path = require("path");
 
-let URL =
-  "mongodb+srv://shishir:khondoker@cluster0.74d5tsz.mongodb.net/donationPlatform";
-
 mongoose
-  .connect(URL)
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("Database Connected");
   })
